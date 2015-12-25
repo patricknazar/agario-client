@@ -3,7 +3,7 @@ var http = require('http');
 var AgarioClient = require('../agario-client.js'); //Use next line in your scripts
 //var AgarioClient = require('agario-client'); //Use this in your scripts
 
-var region = 'EU-London'; //server region to request
+var region = 'SG-Singapore'; //server region to request
 var client = new AgarioClient('worker'); //create new client and call it "worker" (not nickname)
 var interval_id = 0; //here we will store setInterval's ID
 
@@ -85,7 +85,7 @@ client.on('experienceUpdate', function(level, current_exp, need_exp) { //if face
 
 client.on('connected', function() { //when we connected to server
     client.log('spawning');
-    client.spawn('agario-client'); //spawning new ball
+    client.spawn('happydayz'); //spawning new ball
     interval_id = setInterval(recalculateTarget, 100); //we will search for target to eat every 100ms
 });
 
